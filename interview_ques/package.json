@@ -1,8 +1,8 @@
 {
-  "name": "javascript-the-end",
+  "name": "interview_ques",
   "version": "1.0.0",
   "description": "",
-  "main": "arraymethods.js",
+  "main": "day1.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

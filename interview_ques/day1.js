@@ -13,8 +13,8 @@ let person = {
 //they are atomic and non mutable in nature
 //null undefined boolean string number sysmbol Bigint
 
-//console.log(typeof null); //corner case
-//console.log(typeof typeof 12); //typeof(number)
+//console.log(typeof null); //corner case object
+//console.log(typeof typeof 12); //typeof(number) string
 //console.log(typeof 12);
 
 //coersion
@@ -157,3 +157,85 @@ let person = {
 // let upperStr = str.toUpperCase();
 
 // console.log(upperStr); // "HELLO"
+
+// call apply bind
+// Understanding these methods helps in controlling
+// the this context in different situations,
+
+// call: Invokes the function immediately, allows
+// specifying this and individual arguments.
+// apply: Invokes the function immediately, allows specifying
+//this and arguments as an array.
+// bind: Creates a new function with bound this and optional
+//initial arguments, can be called later.
+
+var employee1 = {
+  firstName: "John",
+  laststName: "doe",
+};
+var employee2 = {
+  firstName: "mohan",
+  laststName: "singh",
+};
+
+function invite(greeting1, greeting2) {
+  console.log(
+    greeting1 + " " + this.firstName + " " + this.laststName + "," + greeting2
+  );
+}
+// invite.call(employee1, "hello", "secccdknwdjn");
+// invite.apply(employee1, ["hello", "how are you??"]);
+
+// bind: Creates a new function with bound this and optional
+//initial arguments, can be called later.
+// var bindinvite = invite.bind(employee1);
+// bindinvite("hello", "babayyy");
+// console.log(bindinvite);
+
+// practical usage
+// useful when you want to borrow a method from
+// another object and invoke it immediately
+
+// const personY = {
+//   greet: function () {
+//     console.log("heloo " + this.name);
+//   },
+// };
+
+// const y = { name: "Alice" };
+
+// personY.greet.call(y); //hello alice
+
+// apply
+// useful for function that requires an array of arguments
+// const numbers = [5, 6, 7, 8, 7];
+// const max = Math.max.apply(null, numbers);
+// console.log(max);
+
+//bind
+// Useful for setting this in callback functions or event handlers
+const obj = {
+  name: "Bob",
+  greet: function () {
+    console.log("Hello, " + this.name);
+  },
+};
+
+const greet = obj.greet.bind(obj);
+setTimeout(greet, 1000); // Output: Hello, Bob
+
+//////////////////
+
+// const boy = {
+//   name: "Alice",
+//   age: 30,
+//   city: "Wonderland",
+//   hobbies: ["reading", "gardening", "coding"],
+// };
+
+// Convert the Object to a JSON String with JSON.stringify
+// const boyjson = JSON.stringify(boy);
+// console.log(boyjson);
+
+// const x = JSON.parse(boyjson);
+// console.log(x);
