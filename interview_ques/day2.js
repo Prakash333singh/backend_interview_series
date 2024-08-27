@@ -6,8 +6,7 @@
 // firstOrder();
 
 // higher order function
-// a hof is a fn that accepts another fn as an argument or returns
-// a function as a return value or both
+// a hof is a fn that accepts another fn as an argument or returns a function as a return value or both
 
 // const firstOrder = () => console.log("I am a first order function!");
 // const higherOrder = (x) => x();
@@ -16,7 +15,7 @@
 
 // a pure function is a fn where the return value is only determined by its
 // arguments without any side effects
-
+//and
 // if you call a function with the same argument n number of Times
 // and n number of places in the application the it will always
 // return the same value

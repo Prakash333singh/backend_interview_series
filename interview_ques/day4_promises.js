@@ -1,4 +1,4 @@
-// aa promise is an object that represents the eventaul completion of a
+// a promise is an object that represents the eventaul completion of a
 // a asynchronous operation and its resulting value
 
 // promise provide a cleaner,more readble way to handle asynchronous opertions
