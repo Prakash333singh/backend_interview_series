@@ -26,4 +26,6 @@ function createBackpack() {
 const mybackpack = createBackpack();
 console.log(mybackpack());
 
-///
+///closure
+// all functions in JavaScript are closures,
+// A closure is a function that remembers its outer variables and can access them that is: they automatically remember where they were created using a hidden [[Environment]] property, and then their code can access outer variables.

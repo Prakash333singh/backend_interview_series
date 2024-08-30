@@ -1,7 +1,5 @@
-//aggregation are operations that combine multiple piece of data to
-//produce sigle result
-//they are used to summarize large sets of data,giving us useful
-// insights without having to look at every individual piece of info
+//aggregation are operations that combine multiple piece of data to produce sigle result
+//they are used to summarize large sets of data,giving us useful insights without having to look at every individual piece of info
 
 //studentScores
 
@@ -18,22 +16,15 @@
 // $count is used for counting documents.
 
 //why use cors package ,what does it do
-// cors->cross origin resource
+// cors->cross origin resource sharing
 //it is used to enable cross origin resource sharing in web development
-//it is mechanism implemented by web browers to control access
-// to resources like apis on differnet domain than the one serving the
-// web page
+//it is mechanism implemented by web browers to control access to resources like apis on differnet domain than the one serving the web page
 
 // Why use 'cors'?
-// It allows you to make your server accessible to web pages from different
-//  domains. Without it,
-// browsers would block requests from a webpage to your API if they're not
-//  on the same domain.
+// It allows you to make your server accessible to web pages from different domains. Without it,browsers would block requests from a webpage to your API if they're not on the same domain.
 
 // What does it do?
-// The 'cors' package adds the necessary headers to your server's
-// responses, telling the browser it's okay to allow requests from
-// different origins (domains).
+// The 'cors' package adds the necessary headers to your server's responses, telling the browser it's okay to allow requests from different origins (domains).
 
 // enable cors for all routes
 // app.use(cors());
@@ -55,7 +46,6 @@
 // app.options() is specifically for handling OPTIONS requests, often used with CORS.
 
 // When to use each:
-
 // Use app.use() for applying middleware that should run
 // for multiple routes or all routes.
 // Use app.get() (or app.post(), app.put(), etc.) when you want
