@@ -13,10 +13,11 @@ let person = {
 //they are atomic and non mutable in nature
 // types of primitive data types
 //null undefined boolean string number symbol Bigint
+
 // null there is valid variable with a value of no data type(null value)
 //undefined when we declare any variable but not assiqn any value it is value to into it it automatically becomes undefined
 
-//console.log(typeof null); //corner case object
+//console.log(typeof null); //answer ->object //corner case
 //console.log(typeof typeof 12); //typeof(number) string
 //console.log(typeof 12);
 
@@ -29,10 +30,10 @@ let person = {
 // number 2 implicitly converted to string '2' tostring
 
 //->explicit we are changing maunully
-// console.log(Number("5")); // 5
+//console.log(Number("5")); // 5
 // console.log(String(5));   // '5'
 
-//tyeof(NaN) not a valid number "number"
+// console.log(typeof NaN); //not a valid number "number"
 // undefined + undefined= NaN
 
 //abstract operation
@@ -45,13 +46,17 @@ let person = {
 
 //we cannot directly call them but few js operations like '-','+',etc internally calls them.
 
-// Explain the difference between == and === in JavaScript.
-// first they both checks the value  but after that they do  different things
-// == does type chcking if types are same the it calls calls ===
-//=== checks types and if types are not same return false
+// Explain the difference between ==(Loose equality) and === (Strict equality) in JavaScript.
 
-// == (loose equality) compares two values for equality, after
-//  converting both values to a common type (does  coercion).
+// Value comparison: First, == compares the values of two variables.
+// Type coercion: If the types are different, JavaScript tries to convert one of the values to the same type as the other before making the comparison. This is called type coercion.
+//if both the values are same return true
+
+// first they both checks the value but after that they do  different things
+// == does type chcking if types are same the it  calls ===
+// === checks types and if types are not same return false
+
+// == (loose equality) compares two values for equality, after converting both values to a common type (does  coercion).
 
 // === (strict equality) compares two values for equality without
 // performing any type conversion. Both the type and the value
@@ -102,12 +107,12 @@ let person = {
 //is a way to define function as a part of expression rather then a standalone statement.fn expression can be assigned to a variable or passed as an argument to another function or returned from another function or stored in an object property.
 /// example of function expression
 
-// var f = function (a) {
-//   console.log("hello");
-//   return a;
-// };
+var f = function (a) {
+  console.log("hello");
+  return a;
+};
 
-// f();
+f();
 
 // function add(a) {
 //   console.log("hello", a);
@@ -141,6 +146,7 @@ let person = {
 //let,const block scope hote hai bhai,cannot redeclared
 //let is also hoisted, but unlike var, it is not initialized to undefined.This results in a "temporal dead zone" from
 // the start of the block until the declaration is encountered.
+// Cannot access 'y' before initialization
 // console.log(y);
 // let y = 0;
 
@@ -169,7 +175,6 @@ let person = {
 // console.log(this); ///this will give the output window
 
 // 2.Inside an object method: this refers to the object the method is called on.
-
 // function show() {
 //   console.log(this);
 // }
