@@ -1,8 +1,6 @@
-// a promise is an object that represents the eventaul completion of a
-// a asynchronous operation and its resulting value
+// a promise is an object that represents the eventaul completion of aa asynchronous operation and its resulting value
 
-// promise provide a cleaner,more readble way to handle asynchronous opertions
-// compared to traditional callback methods
+// promise provide a cleaner,more readble way to handle asynchronous opertions compared to traditional callback methods
 
 // States of a Promise
 // Pending: The initial state, neither fulfilled nor rejected.
@@ -157,3 +155,51 @@ function printHello() {
 // console.log(user1 === user2);
 
 // in JavaScript, the variables such as objects, arrays and functions comes under pass by reference. When you try to compare two objects with same content, it is going to compare memory address or reference of those variables. These variables always create separate memory blocks hence the comparison is always going to return false value.
+
+////promise example
+
+const cart = ["item1", "item2", "item3"];
+
+const promise = createOrder(cart);
+console.log(promise);
+
+promise.then((orderId) => {
+  console.log(orderId);
+});
+
+//producer
+
+function createOrder(cart) {
+  const pr = new Promise((resolve, reject) => {
+    //createorder
+    //validcart
+    //orderId
+    if (!validateCart(cart)) {
+      const err = new Error("invalid cart");
+      reject(err);
+    }
+    //logic for creating order
+    const orderId = "12345";
+    // setTimeout(() => {
+    //   resolve(orderId);
+    // }, 2000);
+    resolve(orderId);
+  });
+
+  return pr;
+}
+
+function validateCart(cart) {
+  return true;
+}
+
+// Summary:-
+// Async/await is a JavaScript feature that simplifies handling asynchronous code. Async functions always return a promise, and await can be used inside async functions to pause execution until a promise is resolved. Async/await provides a cleaner syntax compared to traditional promise chaining.
+// Explanation:-
+// -Async functions and await keyword are used to handle promises efficiently. The await keyword can only be used inside an async function to resolve promises, simplifying asynchronous code execution.
+// -Async/await in JavaScript allows the program to wait for a promise to resolve  before moving to the next line
+// -JavaScript is a synchronous single-threaded language where functions are executed line by line. Asynchronous functions like promises suspend execution, allowing other events to proceed, preventing freezing or blocking of the main thread.
+// -JavaScript's call stack quickly executes functions, suspending execution for promises, ensuring smooth program flow.
+// -Using async/await in JavaScript is a syntactic sugar over promises, making code easier to read and understand.
+// -Async/await is a new way of handling promises in JavaScript. It is recommended to use async/await for handling promises for better code readability and debugging.
+// -You can use the Try{} and Catch{} method inside the Async/await for error handling.
