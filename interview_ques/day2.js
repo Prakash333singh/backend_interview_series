@@ -1,5 +1,4 @@
-// a first order fn is a fn that doesn't accept another function
-//  as an argument and doesn't return as its return value
+// a first order fn is a fn that doesn't accept another function as an argument and doesn't return as its return value
 
 // const firstOrder = () => console.log("I am a first order function!");
 
@@ -13,12 +12,7 @@
 
 // higherOrder(firstOrder);
 
-// a pure function is a fn where the return value is only determined by its
-// arguments without any side effects
-//and
-// if you call a function with the same argument n number of Times
-// and n number of places in the application the it will always
-// return the same value
+// a pure function is a fn where the return value is only determined by its arguments without any side effects and if you call a function with the same argument n number of Times and n number of places in the application the it will always return the same value
 
 // function somemethod() {
 //   console.log(counter1); ///undefined
@@ -45,8 +39,7 @@
 // console.log(encoded_uri, decoded_uri);
 
 // callback function
-// a callback function is a function passed into another function
-//as a argument
+// a callback function is a function passed into another function as a argument
 // const prompt = require("prompt-sync")();
 // function callbackfunction(name) {
 //   console.log("hello " + name);

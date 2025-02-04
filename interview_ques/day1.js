@@ -1,10 +1,10 @@
-let person = {
-  name: "adhiakri",
-  age: 21,
-  greet: function () {
-    console.log("hello");
-  },
-};
+// let person = {
+//   name: "adhiakri",
+//   age: 21,
+//   greet: function () {
+//     console.log("hello");
+//   },
+// };
 
 //so there are basically 2 types of data types in js
 //  Primitive data types specify the size and type of variable values
@@ -15,17 +15,20 @@ let person = {
 //null undefined boolean string number symbol Bigint
 
 // null there is valid variable with a value of no data type(null value)
-//undefined when we declare any variable but not assiqn any value it is value to into it it automatically becomes undefined
+
+//undefined when we declare any variable but not assign any value it is value to into it is automatically becomes undefined
 
 //console.log(typeof null); //answer ->object //corner case
 //console.log(typeof typeof 12); //typeof(number) string
 //console.log(typeof 12);
 
 //coersion
-// it stands for type interconversation or type conversion and it is of two types
-//->implicit automaticaaly changed by langauge
+// it stands for type interconversation and it is of two types
+//->implicit automatically changed by language
 //console.log("5" - 2); //3
-///tonumber("5")=5
+///tonumber("5") = 5
+
+// + will call tostring function - will call tonumber automatically
 //console.log("5" + 2); //"52"
 // number 2 implicitly converted to string '2' tostring
 
@@ -37,14 +40,14 @@ let person = {
 // undefined + undefined= NaN
 
 //abstract operation
-//these are operation/function which are not available for end users but js internally uses it.and these operation are mentioned in official docs of js
-//there are many but we have to mainly focus on 4
+//these are operation/function which are not available for end users but javascript internally uses it.and these operation are mentioned in official docs of js
+// there are many but we have to mainly focus on 4
 //tostring
 //toprimitive
 //tonumber
 //toboolean
 
-//we cannot directly call them but few js operations like '-','+',etc internally calls them.
+//we cannot directly call them but few js operations like '-','+',and other operations internally calls them.
 
 // Explain the difference between ==(Loose equality) and === (Strict equality) in JavaScript.
 
@@ -52,15 +55,12 @@ let person = {
 // Type coercion: If the types are different, JavaScript tries to convert one of the values to the same type as the other before making the comparison. This is called type coercion.
 //if both the values are same return true
 
-// first they both checks the value but after that they do  different things
-// == does type chcking if types are same the it  calls ===
+// first they both checks the value but after that they do different things
+// == does type checking if types are same the it  calls ===
 // === checks types and if types are not same return false
 
-// == (loose equality) compares two values for equality, after converting both values to a common type (does  coercion).
-
-// === (strict equality) compares two values for equality without
-// performing any type conversion. Both the type and the value
-// must be the same.(never does coersion)
+// == (loose equality) compares two values for equality, after it convert converting both values to a common type (does  coercion).
+// === (strict equality) compares two values for equality without performing any type conversion. Both the type and the value must be the same.(never does coersion)
 
 // console.log(5 == "5"); // true (string '5' is converted to number 5)
 // console.log(5 === "5"); // false (different types)
@@ -105,14 +105,14 @@ let person = {
 
 // function expression
 //is a way to define function as a part of expression rather then a standalone statement.fn expression can be assigned to a variable or passed as an argument to another function or returned from another function or stored in an object property.
-/// example of function expression
+/// example of function expression.
 
-var f = function (a) {
-  console.log("hello");
-  return a;
-};
+// var f = function (a) {
+//   console.log("hello");
+//   return a;
+// };
 
-f();
+// f();
 
 // function add(a) {
 //   console.log("hello", a);
@@ -123,16 +123,24 @@ f();
 //global scope that are accessible everywhere
 
 //functinal(local scope bhi bolte)
-//variables declare in local scope can be defined and usewithin sepecific fn
+//variables declare in local scope can be defined and use within sepecific fn
 
 //block
-//is like series of nested boxes within a large container each with its own set of variables
+//it is like series of nested boxes within a large container each with its own set of variables
+
+// {
+//   var x = 8;
+//   let x = 5; ///function
+//shadowing let with var is illegal in javascript
+//   {
+//     var x = 8;
+//     // console.log(x);
+//   }
+// }
 
 // var key word has fn scope means they are accissble thoughout the func in which they are declared
-//let const have black scope means they are accessible only within a block
-
+//let,const have block scope means they are accessible only within a block
 // redeclaration is possible with the help of var keyword
-
 // var x = 5;
 // var x = 6;
 // console.log(x);
@@ -151,15 +159,30 @@ f();
 // let y = 0;
 
 //lexical scope means that the scope of a fn is determined by where the func is declared not where it is called
-// function expression
-// var f = function (args) {
-//   console.log("hello");
-// };
-// console.log(f);
+
+// so js engine first looks the variable/function in the local scope and if not found then it looks in the lexical enviornment of its parent scope
+
+//global execution context holds reference to NULL
+
+// function a() {
+//   var b = 10;
+//   c();
+//   function c() {
+//     console.log(b);
+//   }
+// }
+// a();
+// console.log(b);
+
+// Closure:
+// The function c() is nested inside a(), and it has access to b because b is defined in its parent function a(). This is an example of a closure in JavaScript. Closures allow inner functions to access variables from their outer functions.
+// b is not accessible in the global scope.The variable b is function-scoped and exists only inside the function a().
+
+///function bundled with lexical scope is called closure
+// lexical scope means that the scope of a fn is determined by where the func is declared not where it is called
 
 //  Boxing: Wrapping a primitive value in its corresponding object wrapper
 // Primitive value
-
 //Boxing is a process where JavaScript automatically converts a basic data type (like a string or a number) into an object so that it can use methods (functions) that are available on that object.
 
 // let str = "hello";
@@ -175,16 +198,17 @@ f();
 // console.log(this); ///this will give the output window
 
 // 2.Inside an object method: this refers to the object the method is called on.
-// function show() {
-//   console.log(this);
-// }
+function show() {
+  console.log(this);
+}
 
 // show(); // Logs the global object (window in browsers)
-// const obj = { name: 'Alice', show: show };
-// obj.show(); // Logs the
+
+const obj = { name: "Alice", show: show };
+obj.show(); // Logs the object itself
 
 // //3. Event handlers: this refers to the DOM element that received the event.
-// document.querySelector('button').addEventListener('click', function() {
+// document.querySelector("button").addEventListener("click", function () {
 //   console.log(this); // Logs the button element
 // });
 
@@ -223,7 +247,7 @@ function invite(greeting1, greeting2) {
 
 // practical usage
 // useful when you want to borrow a method from
-// another object and invoke it immediately
+// another object and invoke it immediately.
 
 // const personY = {
 //   greet: function () {
@@ -243,15 +267,15 @@ function invite(greeting1, greeting2) {
 
 //bind
 // Useful for setting this in callback functions or event handlers
-const obj = {
-  name: "Bob",
-  greet: function () {
-    console.log("Hello, " + this.name);
-  },
-};
+// const obj = {
+//   name: "Bob",
+//   greet: function () {
+//     console.log("Hello, " + this.name);
+//   },
+// };
 
-const greet = obj.greet.bind(obj);
-setTimeout(greet, 1000); // Output: Hello, Bob
+// const greet = obj.greet.bind(obj);
+// setTimeout(greet, 1000); // Output: Hello, Bob
 
 //////////////////
 

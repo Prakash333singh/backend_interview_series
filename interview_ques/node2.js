@@ -1,5 +1,4 @@
 ///what is cookie??
-
 // A cookie is a small piece of data that a server sends to a user's web browser. The browser stores this data and sends it back to the server with future requests to the same server. Cookies are used for various purposes, such as:
 
 // Session Management: Keeping users logged in as they navigate a site.
@@ -128,3 +127,6 @@ Timeout
 - **Node.js Event Loop**: Handles I/O-bound tasks (file I/O, networking) and more complex asynchronous operations with a phase-driven event loop.
 
 */
+
+// ### **best article
+// https://medium.com/@manikmudholkar831995/event-loop-in-nodejs-999f6db7eb04#b17c

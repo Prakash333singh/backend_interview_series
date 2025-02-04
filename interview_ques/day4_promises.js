@@ -1,5 +1,4 @@
-// a promise is an object that represents the eventaul completion of aa asynchronous operation and its resulting value
-
+// a promise is an object that represents the eventaul completion of a asynchronous operation and its resulting value
 // promise provide a cleaner,more readble way to handle asynchronous opertions compared to traditional callback methods
 
 // States of a Promise
@@ -7,8 +6,7 @@
 // Fulfilled: The operation completed successfully
 // Rejected: The operation failed.
 
-// Concurrency: Promises can be used with Promise.all to run multiple asynchronous operations
-// concurrently and wait for all of them to complete
+// Concurrency: Promises can be used with Promise.all to run multiple asynchronous operations concurrently and wait for all of them to complete
 
 // function fetchData() {
 //   return new Promise((resolve, reject) => {
@@ -34,10 +32,7 @@
 
 //Promise.all([source1,source2]);
 
-// Definition: Callback hell,
-//  also known as the "Pyramid of Doom," refers
-// to a situation where callbacks are nested within other callbacks several
-//  levels deep, making the code difficult to read and maintain.
+// Definition: Callback hell, also known as the "Pyramid of Doom," refers to a situation where callbacks are nested within other callbacks several levels deep, making the code difficult to read and maintain.
 
 function step1() {
   return new Promise((resolve) => {
@@ -92,8 +87,7 @@ async function executeSteps() {
 // executeSteps();
 
 // Think of "use strict" as  set of rules for your JavaScript code.
-//  When you enable it, JavaScript will be more strict about how you write your code,
-//making it easier to avoid errors and write safer, cleaner code,Prevents Accidental Globals:.
+//  When you enable it, JavaScript will be more strict about how you write your code,making it easier to avoid errors and write safer, cleaner code,Prevents Accidental Globals:.
 
 // var user; // Value is undefined, type is undefined
 // console.log(typeof user); //undefined

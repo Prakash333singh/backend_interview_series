@@ -1,15 +1,24 @@
 // Async and Await in JavaScript is used to simplify handling asynchronous operations using promises
 // and async function always return a promise
-// The await keyword is used to wait for a promise to resolve.and Await can only be used inside the async Function and it is just syntactic sugar over promises
-// And async function always returns a promise
+// The await keyword is used to wait for a promise to resolve.and Await can only be used inside the async Function and it is just syntactic sugar over promises And async function always returns a promise
+
 // const p = new Promise((resolve, reject) => {
 //   setTimeout(() => {
 //     resolve("promise resolved");
 //   }, 5000);
 // });
+// console.log(p);
+
+// async function handlefn() {
+//   const val = p;
+//   console.log(val);
+//   console.log("hello");
+//   console.log("Namste Javascript");
+// }
+// handlefn();
 
 // async function handlePromise() {
-//   //he basic difference b/w promise and async/await is async/await will wait for the promise to resolve and await gets its value meanwhile promise doesn't wait for the value it directly moves to the The next line of code.
+//   //the basic difference b/w promise and async/await is async/await will wait for the promise to resolve and await gets its value meanwhile promise doesn't wait for the value it directly moves to the The next line of code.
 
 //   const val = await p;
 //   //Js engine will wait for the promise to resolve await will get value
@@ -19,30 +28,30 @@
 // }
 // handlePromise();
 
-const p1 = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    resolve("promise resolved value!!");
-  }, 10000);
-});
+// const p1 = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     resolve("promise resolved value!!");
+//   }, 10000);
+// });
 
-const p2 = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    resolve("promise resolved value!!");
-  }, 5000);
-});
+// const p2 = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     resolve("promise resolved value!!");
+//   }, 5000);
+// });
 
-async function handlePromise() {
-  console.log("hello world");
-  //js engine was waiting for the promise to be resolved
-  const val1 = await p1;
-  //the JS will never wait here only function is
-  ///suspend till the promise fulfilled
-  console.log("Namste Javascript 11111");
-  console.log(val1);
-  const val2 = await p2;
-  console.log("Namste Javascript 22222");
-  console.log(val2);
-}
+// async function handlePromise() {
+//   console.log("hello world");
+//   //js engine was waiting for the promise to be resolved
+//   const val1 = await p1;
+//   //the JS will never wait here only function is
+//   ///suspend till the promise fulfilled
+//   console.log("Namste Javascript 11111");
+//   console.log(val1);
+//   const val2 = await p2;
+//   console.log("Namste Javascript 22222");
+//   console.log(val2);
+// }
 
 // handlePromise();
 
@@ -67,3 +76,23 @@ async function fetchapi() {
 }
 fetchapi();
 // The advantages of using async/wait is avoiding promise chaining in async/await.
+
+//shallow copy
+// shallow copy creates a new object or array and copies the references of the original elements
+
+//ways to perform shallow copy
+//spread operator
+// const shallowCopy={...original}
+// const shallowArrayCopy=[ ...originalArray ]
+
+//array slice
+// const shallowArrayCopy = originalArray.slice();
+
+//deep copy
+// deep copy creates entirely new copies of the original elements,including nested objects and arrays.
+
+//ways to perform deep copy
+//JSON.parse() and JSON.stringify():
+
+// JSON.parse(JSON.stringify(original))
+// JSON.parse(JSON.stringify(originalArray))

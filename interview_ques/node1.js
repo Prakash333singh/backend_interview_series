@@ -145,6 +145,7 @@
 // Example:
 // js
 // Copy code
+
 // const EventEmitter = require('events');
 // const eventEmitter = new EventEmitter();
 
