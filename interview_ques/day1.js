@@ -14,6 +14,8 @@
 // types of primitive data types
 //null undefined boolean string number symbol Bigint
 
+// bigint // it is used to represent integers with arbitrary precision and can be used for very large numbers that exceed the range of the Number type.
+
 // null there is valid variable with a value of no data type(null value)
 
 //undefined when we declare any variable but not assign any value it is value to into it is automatically becomes undefined
@@ -122,7 +124,7 @@
 //scopes
 //global scope that are accessible everywhere
 
-//functinal(local scope bhi bolte)
+//functional(local scope bhi bolte)
 //variables declare in local scope can be defined and use within sepecific fn
 
 //block

@@ -8,6 +8,17 @@
 
 // Concurrency: Promises can be used with Promise.all to run multiple asynchronous operations concurrently and wait for all of them to complete
 
+// const promise = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     const success = true; // Simulating success or failure
+//     if (success) {
+//       resolve("Operation completed successfully!");  
+//     } else { 
+//       reject("Operation failed!");
+//     }
+//   }, 2000); // Simulating a 2-second delay
+// });
+
 // function fetchData() {
 //   return new Promise((resolve, reject) => {
 //     setTimeout(() => {

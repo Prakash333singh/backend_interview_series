@@ -3,4 +3,5 @@
 // tRPC requires both client and server code to be in a monorepo(both frontend and backend should be in same repo), limiting flexibility compared to gRPC. This design choice ensures shared types between front-end and back-end components.
 
 
-///graphQL (https://medium.com/techtalkers/a-beginners-guide-to-graphql-12d60d3fba03)
+///graphQL (https://medium.com/techtalkers/a-beginners-guide-to-graphql-12d60d3fba03 )
+

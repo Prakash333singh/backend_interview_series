@@ -76,3 +76,4 @@
 // }
 
 // test();
+// JavaScript doesn't have traditional private and public access modifiers like languages such as Java or C#. That’s one of the big reasons closures are used — they simulate private variables.
