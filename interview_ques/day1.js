@@ -231,13 +231,9 @@
 // After the compilation phase is complete and the environment is set up, the engine starts executing the code line by line, performing the operations defined in your program.
 
 // During this phase:
-
 // Assignments: Values are assigned to variables.
-
 // Function Calls: Functions are invoked, and their code runs.
-
 // Expression Evaluation: Expressions are evaluated (e.g., 2 + 3 becomes 5).
-
 // Code Logic: The actual logic of your program unfolds.
 
 ///garbage collection it work on mark of sweep algorithms
