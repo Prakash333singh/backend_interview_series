@@ -1,3 +1,26 @@
+// odm vs orm
+// An ORM(Object-Relational Mapping) acts as a translator between the object-oriented code you write and the relational tables in your database.
+//Sequelize (for Node.js)
+// orm have object-to-database mapping capabilities 
+
+//Prisma consists of three main parts that work together:
+
+// Prisma Schema: This is a single, declarative configuration file (schema.prisma) that defines your database schema and your data models in a human-readable and database-agnostic way.
+
+// Prisma Client: This is an auto-generated, type-safe query builder that allows you to interact with your database from your application code (e.g., Node.js, TypeScript, Go).
+
+// Prisma Migrate: This is a powerful migration tool that helps you evolve your database schema in a controlled and versioned manner.
+//Step 1: Define Your Schema (create a file name schema.prisma)
+// step 2: Migrate Your Database (for initial setup and schema changes)(npm prisma db push)
+// Step 3: Generate the Prisma Client (this step will automatically takes place after running above command )
+//now Interact with Your Database using Prisma Client
+
+
+// This is used with document databases (like MongoDB, CouchDB). These databases store data in a flexible, semi-structured format, typically as JSON or BSON documents. These documents can have different structures within the same collection.
+//  An ODM acts as a translator between the objects in your code and the documents in your database.
+
+
+
 // let person = {
 //   name: "adhiakri",
 //   age: 21,
@@ -88,6 +111,7 @@
 // 11.What is the result of true == '1' and true === '1'?
 //true == '1' is true because true is coerced to 1, and '1' is coerced to 1 before comparison.
 
+
 // true === '1' is false because the types are different // (boolean vs string).
 
 // Explain the result of 4 > '5'.
@@ -153,6 +177,16 @@
 // console.log(y); //undefined
 // var y = 7;
 
+
+//why let/const were introduced 
+//because var are not block scoped like If you declare var inside an if block or a for loop, it will still be accessible outside that block
+
+// for (var i = 0; i < 3; i++) {
+  // Loop body
+// }
+// console.log(i); // 'i' is still accessible here, and its final value is 3 (problematic in loops)
+
+
 //let,const block scope hote hai bhai,cannot redeclared
 //let is also hoisted, but unlike var, it is not initialized to undefined.This results in a "temporal dead zone" from
 // the start of the block until the declaration is encountered.
@@ -175,6 +209,40 @@
 // }
 // a();
 // console.log(b);
+
+
+///javascript runs in two phases complition phase (Parsing/Creation) Phase and excaution phase 
+// Phase 1: Compilation/Parsing/Creation Phase
+// This phase happens before any of your code actually runs. The JavaScript engine goes through your code line by line, but it's not executing operations; it's setting up the environment. During this phase, the following key things occur:
+
+// Lexical Analysis (Tokenization): The code is broken down into a stream of tokens (keywords, identifiers, operators, etc.).
+// var x = 10; becomes tokens like var, x, =, 10, ;.
+// Parsing: The tokens are then used to build an Abstract Syntax Tree (AST). The AST is a tree representation of the syntactic structure of your code. If there are syntax errors, they are caught here.
+// Scope Creation: The engine determines the different scopes (global scope, function scopes) in your code.
+// Hoisting: This is a crucial step for understanding var and function declarations. During the compilation phase, var declarations and function declarations are "hoisted" (moved conceptually) to the top of their respective scopes.
+// For var variables, only the declaration is hoisted, not the initialization. They are automatically initialized to undefined.
+// For function declarations, both the declaration and the definition (the actual code inside the function) are hoisted.
+
+// Memory Allocation for Variables and Functions: The engine allocates memory for all identified variables and functions within their respective scopes. For var variables, they are assigned the initial value of undefined. Function declarations are fully placed into memory.
+
+// Think of it like this: Before a chef starts cooking (execution), they first read the entire recipe, understand the steps, gather all the ingredients (variables), and set up their stations (scopes). They might even pre-chop some vegetables (hoisting var to undefined).
+
+// Phase 2: Execution Phase
+// After the compilation phase is complete and the environment is set up, the engine starts executing the code line by line, performing the operations defined in your program.
+
+// During this phase:
+
+// Assignments: Values are assigned to variables.
+
+// Function Calls: Functions are invoked, and their code runs.
+
+// Expression Evaluation: Expressions are evaluated (e.g., 2 + 3 becomes 5).
+
+// Code Logic: The actual logic of your program unfolds.
+
+///garbage collection it work on mark of sweep algorithms
+//lexical means kha apka code likha hua hai 
+//scope means kha pe usko kitna access hai
 
 // Closure:
 // The function c() is nested inside a(), and it has access to b because b is defined in its parent function a(). This is an example of a closure in JavaScript. Closures allow inner functions to access variables from their outer functions.
