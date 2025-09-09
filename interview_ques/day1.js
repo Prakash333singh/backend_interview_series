@@ -19,8 +19,6 @@
 // This is used with document databases (like MongoDB, CouchDB). These databases store data in a flexible, semi-structured format, typically as JSON or BSON documents. These documents can have different structures within the same collection.
 //  An ODM acts as a translator between the objects in your code and the documents in your database.
 
-
-
 // let person = {
 //   name: "adhiakri",
 //   age: 21,
@@ -264,14 +262,14 @@
 // console.log(this); ///this will give the output window
 
 // 2.Inside an object method: this refers to the object the method is called on.
-function show() {
-  console.log(this);
-}
+// function show() {
+//   console.log(this);
+// }
 
 // show(); // Logs the global object (window in browsers)
 
-const obj = { name: "Alice", show: show };
-obj.show(); // Logs the object itself
+// const obj = { name: "Alice", show: show };
+// obj.show(); // Logs the object itself
 
 // //3. Event handlers: this refers to the DOM element that received the event.
 // document.querySelector("button").addEventListener("click", function () {

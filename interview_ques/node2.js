@@ -1,6 +1,5 @@
 ///what is cookie??
 // A cookie is a small piece of data that a server sends to a user's web browser. The browser stores this data and sends it back to the server with future requests to the same server. Cookies are used for various purposes, such as:
-
 // Session Management: Keeping users logged in as they navigate a site.
 // Personalization: Storing user preferences and settings.
 // Tracking: Collecting data on user behavior for analytics or advertising.

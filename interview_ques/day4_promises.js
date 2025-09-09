@@ -1,6 +1,7 @@
 // a promise is an object that represents the eventaul completion of a asynchronous operation and its resulting value
 // promise provide a cleaner,more readble way to handle asynchronous opertions compared to traditional callback methods
 
+
 // States of a Promise
 // Pending: The initial state, neither fulfilled nor rejected.
 // Fulfilled: The operation completed successfully
@@ -18,6 +19,49 @@
 //     }
 //   }, 2000); // Simulating a 2-second delay
 // });
+
+//promise.all 
+// ✅What it does:
+// Waits for all promises to resolve. If any one fails, the whole thing fails.
+// 🧠 Use case:
+// You want to run multiple async tasks in parallel and proceed only when all succeed.
+
+
+//promise.allsettled
+// ✅ What it does:
+// Waits for all promises to settle, regardless of success or failure.
+// 🧠 Use case:
+// You want to know the outcome of every promise, even if some fail.
+
+
+//promise.race
+// ✅ What it does:
+// Returns the result of the first settled promise (resolved or rejected).
+// 🧠 Use case:
+// You want to act on whichever finishes first, like a timeout vs. a network request.
+
+
+// Promise.any()
+// ✅ What it does:
+// Returns the first successfully resolved promise. Ignores rejections unless all fail.
+
+// 🧠 Use case:
+// You want at least one success, and don’t care which one.
+
+
+
+// function hello(){
+//   for(var i=0;i<5;i++){
+//     console.log("helllo",i);
+//    setTimeout( () =>{
+//     console.log(i);
+//    },i*1000)
+//   }
+// }
+
+// hello();
+//it will print 5 five times because by the time the setTimeout callback executes, the loop has already completed and the value of i is 5. All the callbacks reference the same variable i, which has been incremented to 5 after the loop ends.
+
 
 // function fetchData() {
 //   return new Promise((resolve, reject) => {
@@ -159,6 +203,12 @@ function printHello() {
 
 // console.log(user1 === user2);
 
+// const a=1;
+// const b=1;
+// console.log(a===b); //true
+
+// when we compare two primitive data types like number,string,boolean it is going to compare the value of those variables and if the value is same it is going to return true else false.
+
 // in JavaScript, the variables such as objects, arrays and functions comes under pass by reference. When you try to compare two objects with same content, it is going to compare memory address or reference of those variables. These variables always create separate memory blocks hence the comparison is always going to return false value.
 
 ////promise example
@@ -199,12 +249,24 @@ function validateCart(cart) {
 }
 
 // Summary:-
+//async and await are used to handle promises in a more readable and maintainable way. An async function returns a promise, and the await keyword can be used inside an async function to pause execution until a promise is resolved. This allows for writing asynchronous code that looks and behaves like synchronous code, making it easier to understand and debug.
+
 // Async/await is a JavaScript feature that simplifies handling asynchronous code. Async functions always return a promise, and await can be used inside async functions to pause execution until a promise is resolved. Async/await provides a cleaner syntax compared to traditional promise chaining.
 // Explanation:-
 // -Async functions and await keyword are used to handle promises efficiently. The await keyword can only be used inside an async function to resolve promises, simplifying asynchronous code execution.
-// -Async/await in JavaScript allows the program to wait for a promise to resolve  before moving to the next line
+// -Async/await in JavaScript allows the program to wait for a promise to resolve before moving to the next line
 // -JavaScript is a synchronous single-threaded language where functions are executed line by line. Asynchronous functions like promises suspend execution, allowing other events to proceed, preventing freezing or blocking of the main thread.
 // -JavaScript's call stack quickly executes functions, suspending execution for promises, ensuring smooth program flow.
 // -Using async/await in JavaScript is a syntactic sugar over promises, making code easier to read and understand.
 // -Async/await is a new way of handling promises in JavaScript. It is recommended to use async/await for handling promises for better code readability and debugging.
 // -You can use the Try{} and Catch{} method inside the Async/await for error handling.
+
+console.log("script start");
+
+async function fetch(){
+  setTimeout(()=>{
+    console.log("hellooo inside async fun")
+  },2000)
+}
+ fetch()
+console.log("script end ")
