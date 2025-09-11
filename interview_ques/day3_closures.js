@@ -1,9 +1,7 @@
 //closure is when a function remembers its lexical scope even when the function is executed outside the lexical scope
 // function bundled with lexical scope is called closure.
 //lexical scope is determined by where the function is declared not where it is called
-
 //The process of determining the scopes of the variables/functions during runtime is called lexical scoping.
-
 // Real-life analogy: Think of a closure as a backpack that a person carries.
 // Inside the backpack, there are items (variables) that the person
 // can use anytime, even if they move to a different place.

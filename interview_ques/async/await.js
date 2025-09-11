@@ -89,7 +89,7 @@ fetchapi();
 // const shallowArrayCopy = originalArray.slice();
 
 //deep copy
-// deep copy creates entirely new copies of the original elements,including nested objects and arrays.
+//deep copy creates a new object or array and copies the values of the original elements
 
 //ways to perform deep copy
 //JSON.parse() and JSON.stringify():

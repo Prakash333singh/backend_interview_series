@@ -35,10 +35,21 @@
 // types of primitive data types
 //null undefined boolean string number symbol Bigint
 
+// non-primitive data types (also known as reference data types) are more complex data structures that can hold multiple values or properties.
+// They are mutable and can be modified after their creation.
+// types of non-primitive data types
+// object array function date
+//object is a collection of key value pairs
+// let obj = {
+//   name: "adhiakri",
+//   age: 21,
+//   greet: function () {
+//     console.log("hello");
+//   },
+// };
 // bigint // it is used to represent integers with arbitrary precision and can be used for very large numbers that exceed the range of the Number type.
 
 // null there is valid variable with a value of no data type(null value)
-
 //undefined when we declare any variable but not assign any value it is value to into it is automatically becomes undefined
 
 //console.log(typeof null); //answer ->object //corner case
@@ -192,9 +203,7 @@
 // console.log(y);
 // let y = 0;
 
-//lexical scope means that the scope of a fn is determined by where the func is declared not where it is called
-
-// so js engine first looks the variable/function in the local scope and if not found then it looks in the lexical enviornment of its parent scope
+//lexical scope means that the scope of a fn is determined by where the func is declared not where it is called so js engine first looks the variable/function in the local scope and if not found then it looks in the lexical enviornment of its parent scope
 
 //global execution context holds reference to NULL
 
@@ -212,7 +221,6 @@
 ///javascript runs in two phases complition phase (Parsing/Creation) Phase and excaution phase 
 // Phase 1: Compilation/Parsing/Creation Phase
 // This phase happens before any of your code actually runs. The JavaScript engine goes through your code line by line, but it's not executing operations; it's setting up the environment. During this phase, the following key things occur:
-
 // Lexical Analysis (Tokenization): The code is broken down into a stream of tokens (keywords, identifiers, operators, etc.).
 // var x = 10; becomes tokens like var, x, =, 10, ;.
 // Parsing: The tokens are then used to build an Abstract Syntax Tree (AST). The AST is a tree representation of the syntactic structure of your code. If there are syntax errors, they are caught here.
