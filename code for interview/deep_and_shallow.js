@@ -96,13 +96,3 @@ debouncedSearch("hello");
 // ✅ Only "hello" triggers API after 500ms
 
 
-
-
-
-
-
-
-
-
-
-//explain the concept of event bubbling and event capturing 

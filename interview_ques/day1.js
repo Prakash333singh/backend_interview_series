@@ -286,8 +286,7 @@
 
 //can also be used with call,apply,bind
 // call apply bind
-// call, apply, and bind are methods in JavaScript that allow you to control the context (this keyword)
-// within which a function is executed.Understanding these methods helps in controlling the this context in different situations,
+// call, apply, and bind are methods in JavaScript that allow you to control the context (this keyword) within which a function is executed.Understanding these methods helps in controlling the this context in different situations,
 // call: Invokes the function immediately, allows specifying this and individual arguments.
 // apply: Invokes the function immediately, allows specifying
 //this and arguments as an array.

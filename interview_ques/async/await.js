@@ -1,6 +1,4 @@
-// Async and Await in JavaScript is used to simplify handling asynchronous operations using promises
-// and async function always return a promise
-// The await keyword is used to wait for a promise to resolve.and Await can only be used inside the async Function and it is just syntactic sugar over promises And async function always returns a promise
+// Async and Await in JavaScript is used to simplify handling asynchronous operations using promises and async function always return a promise The await keyword is used to wait for a promise to resolve.and Await can only be used inside the async Function and it is just syntactic sugar over promises And async function always returns a promise.
 
 // const p = new Promise((resolve, reject) => {
 //   setTimeout(() => {
