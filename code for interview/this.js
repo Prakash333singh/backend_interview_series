@@ -13,6 +13,8 @@
 //{name: 'sachin', getName: [Function: getName]}
 // sachin will be printed ?? beacuse this points to jo dot ke left side mai hoga 
 
+//  The this keyword in JavaScript is a special keyword in js that refers to the context in which a function is executed. It can be tricky because its value depends on how and where the function is called, not where it's defined.
+
 //this is an object that the function is a property of
 
 //whenever we run javascript file then it create a global excecution context which gives access to two things
