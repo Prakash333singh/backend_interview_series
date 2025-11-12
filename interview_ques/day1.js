@@ -135,7 +135,7 @@
 // console.log(NaN === NaN); //false
 
 // let a = "abc";
-// console.log(isNaN(a));
+// console.log(isNaN(a));true
 // When you pass the string "abc" to isNaN, JavaScript attempts to convert the string to a number.
 
 // function expression
